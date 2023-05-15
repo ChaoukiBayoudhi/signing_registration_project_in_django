@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>My Site</h1>
+      {% if user.is_authenticated %}
+        <p>Welcome, {{ user.get_full_name }} (<a href="{% url 'signing_registration_app:logout' %}">Logout</a>)</p>
+      {% else %}
+      <p><a href="{% url 'signing_registration_app:login' %}">Login</a> | <a href="{% url 'signing_registration_app:register' %}">Register</a></p>
+      {% endif %}
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

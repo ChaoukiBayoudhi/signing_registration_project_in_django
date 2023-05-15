@@ -1,0 +1,84 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+  
+  /* Login page styles */
+  .login-form {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+  }
+  
+  .login-form button[type="submit"]:hover {
+    background-color: #006b8f;
+    cursor: pointer;
+  }
+  
+  /* Dashboard styles */
+  .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-item {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .dashboard-item h2 {
+    margin-top: 0;
+  }
+  
+  .dashboard-item p {
+    margin-bottom: 0;
+  }
+  
+  .dashboard-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #008cba;
+    text-decoration: none;
+  }
+  
+  .dashboard-link:hover {
+    text-decoration: underline;
+  }
+  
