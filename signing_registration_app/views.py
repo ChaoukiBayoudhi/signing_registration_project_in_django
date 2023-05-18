@@ -4,14 +4,21 @@ from .forms import RegistrationForm, CustomAuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.contrib import messages
+
+#the render method is used to render a html page
+#the redirect method is used to redirect to a specific url
+#render parameters are request and the html page to be rendered
+# rendering parameters could contain a dictionary of variables to be used in the html page
+#redirect parameters are the url to be redirected to
 def home(request):
     return render(request, 'accounts/base.html')
 
 def user_login(request):
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, data=request.POST)
+        print('form = ',form)
         if form.is_valid():
-            email = form.cleaned_data.get('email')
+            email = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             print(email, password)
             user = authenticate(request, email=email, password=password)

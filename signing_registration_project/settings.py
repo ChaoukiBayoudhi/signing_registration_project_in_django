@@ -169,7 +169,7 @@ STATICFILES_DIRS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['signing_registration_project/templates/accounts'],
+        'DIRS': ['./signing_registration_app/templates/accounts'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

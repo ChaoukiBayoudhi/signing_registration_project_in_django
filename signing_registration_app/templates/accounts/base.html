@@ -1,3 +1,13 @@
+{% comment %}
+{% load static%} tag is used to load static files like css, js, images etc.
+{% static 'css/style.css' %} is used to load static files from static folder.
+{% url 'signing_registration_app:logout' %} is used to load url from urls.py file.
+{% if user.is_authenticated %} is used to check if user is logged in or not.
+{% else %} is used to check if user is not logged in.
+{% block title %}My Site{% endblock %} is used to set title of the page.
+{% block content %}{% endblock %} is used to set content of the page.
+{{ user.get_full_name }} is used to get full name of the user.
+{% endcomment %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -15,6 +25,10 @@
       <p><a href="{% url 'signing_registration_app:login' %}">Login</a> | <a href="{% url 'signing_registration_app:register' %}">Register</a></p>
       {% endif %}
     </header>
+    {% comment %} <main> tag is used to set content of the page.
+    {% block content %}{% endblock %} is used to set content of the page.
+    
+         {% endcomment %}
     <main>
       {% block content %}{% endblock %}
     </main>

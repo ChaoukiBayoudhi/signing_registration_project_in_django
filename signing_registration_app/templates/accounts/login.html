@@ -4,6 +4,11 @@
   <h2>Login</h2>
   <form method="post">
     {% csrf_token %}
+    {% comment %}
+    form.as_p is a shortcut for rendering each field wrapped in a paragraph tag
+    more simply, it's used to render the form in a more readable way
+    the p is for pretty printing
+     {% endcomment %}
     {{ form.as_p }}
     <button type="submit">Login</button>
   </form>

@@ -1,5 +1,15 @@
-{% extends 'base.html' %}
 
+{% comment %}
+the extend tag is used to extend an other template
+ {% endcomment %}
+{% extends 'base.html' %}
+{% comment %}
+the block tag is used to define a block template
+csrf_token tag is used to generate a CSRF token
+The CSRF token is used to protect against Cross Site Request Forgeries
+This vulnerability is about tricking a user into submitting a request they did not intend.
+In simply words, the CSRF token is used to prevent a malicious website from sending requests to a website where the user is logged in.
+{% endcomment %}
 {% block content %}
   <h1>Welcome, {{ user.email }}!</h1>
   <form method="post" action="{% url 'logout' %}">
